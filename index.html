@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acceso MT WORLD COSTA RICA</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: url('logo-fondo.jpg') no-repeat center center;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .contenedor {
+      background: rgba(0, 0, 0, 0.92);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 350px;
+      transition: all 0.3s ease;
+    }
+
+    .contenedor:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    .contenedor img {
+      max-width: 150px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: red;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      text-align: center;
+      transition: border 0.3s ease;
+    }
+
+    input[type="password"]:focus {
+      border-color: #00BFFF;
+      outline: none;
+    }
+
+    button {
+      background: linear-gradient(90deg, #FF0000, #CC0000);
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #CC0000, #990000);
+    }
+
+    @media screen and (max-width: 400px) {
+      .contenedor {
+        width: 90%;
+        padding: 20px;
+      }
+
+      .contenedor img {
+        max-width: 120px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      input[type="password"] {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 10px 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <img src="logo.jpg" alt="MT World Costa Rica Logo">
+    <h2>MT WORLD</h2>
+    <input type="password" id="clave" placeholder="Contraseña">
+    <br>
+    <button onclick="verificar()">Entrar</button>
+  </div>
+
+  <script>
+    function verificar() {
+      const clave = document.getElementById("clave").value;
+      const claveCorrecta = "mt2025"; // Cambia esta contraseña
+      const enlaceDrive = "https://drive.google.com/drive/folders/1RGIGudBySLHoKM_jGab47uOHCgch1465?usp=drive_link "; // Tu enlace de Drive
+
+      if (clave === claveCorrecta) {
+        window.location.href = enlaceDrive;
+      } else {
+        alert("Contraseña incorrecta.");
+      }
+    }
+  </script>
+</body>
+</html>
